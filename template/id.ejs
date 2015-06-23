@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Test</title>
+</head>
+<body>
+<%
+var id = locals.id;
+var secondId = locals.secondId;
+%>
+<h1><%= id %></h1>
+<%if(secondId){%>
+<h2><%= secondId %></h2>
+<%}%>
+</body>
+</html>
