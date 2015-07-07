@@ -1,11 +1,16 @@
 var exiler = require("exiler");
 
 var options = {
+	publicFolder: "src/public",
+	templateFolder: "src/template",
 	route: {
 		index: {
 			ex_data: function (resolve) {
 				resolve({aaa: 1});
 			}
+		},
+		nodata: {
+			ex_template: "nodata.ejs"
 		},
 		pageAction: {
 			ex_data: {
