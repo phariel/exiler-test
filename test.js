@@ -18,21 +18,23 @@ var options = {
 			},
 			ex_template: "page.ejs"
 		},
-		ex_param_id: {
-			ex_data: function (resolve, param) {
-				resolve({
-					id: param.id
-				});
-			},
-			ex_template: "id.ejs",
-			ex_param_secondId: {
+		paramTest: {
+			ex_param_id: {
 				ex_data: function (resolve, param) {
 					resolve({
-						id: param.id,
-						secondId: param.secondId
+						id: param.id
 					});
 				},
-				ex_template: "id.ejs"
+				ex_template: "id.ejs",
+				ex_param_secondId: {
+					ex_data: function (resolve, param) {
+						resolve({
+							id: param.id,
+							secondId: param.secondId
+						});
+					},
+					ex_template: "id.ejs"
+				}
 			}
 		}
 	}
